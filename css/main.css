@@ -211,7 +211,7 @@ footer {
     align-self: end;
     color: rgb(110, 110, 110);
     border-top: 1px solid rgb(110, 110, 110);
-    padding-top: 5px;
+    padding: 5px;
 }
 
 @media(max-width:730px) {
