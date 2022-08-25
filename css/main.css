@@ -1,0 +1,301 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #2f3030;
+    height: 130px;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 750px;
+    overflow-x: hidden;
+    justify-content: space-around;
+}
+.logo{
+    
+}
+.logo img {
+    width: 250px;
+}
+
+.menu {
+    
+}
+
+nav {}
+.menu-mobile{
+display: none;
+
+width: 80px;
+height: 80px;
+margin-top: 25px;
+margin-bottom: 25px;
+}
+.mm-line{
+    
+    height: 4px;
+    background: red;
+}
+nav ul {
+    display: flex;
+
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    
+    margin-left: 5px;
+}
+
+nav a:hover {
+    background-color: coral;
+    box-shadow: 0 0 15px coral;
+
+}
+
+#banner {
+    background-image: url(../img/jiraia.jpg);
+    height: 750px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.Jiraiya_text {
+    font-size: 50px;
+    padding-left: 30px;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+#geral {
+    background-image: url(../img/konoha.jpg);
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.widget-title {
+    width: 730px;
+    background-color: #f56e5a;
+    ;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+}
+
+.widget-body {
+    width: 730px;
+    height: 450px;
+    background-color: burlywood;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photo figure {
+    border: 3px solid #555;
+    background-color: #555;
+}
+
+.photo figure img {
+    width: 260px;
+    height: 195px;
+    object-fit: cover;
+
+}
+
+.photo figure figcaption {
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 18px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.biography {
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.biography span {
+    text-decoration: underline;
+    color: greenyellow;
+    text-shadow: 2px 2px 2px black;
+}
+
+.habilities {
+    height: auto;
+}
+
+footer {
+
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    background-color: #2f3030;
+    height: 130px;
+    flex-direction: column;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    width: 730px;
+    overflow-x: hidden;
+}
+
+
+.footer-area {
+    display: flex;
+
+}
+
+
+
+.fonts {
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+
+
+}
+
+.fonts a {
+    text-decoration: underline;
+    color: white;
+}
+
+.fonts a:hover {
+    text-shadow: 1px 1px 2px rgb(74, 172, 204);
+}
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    align-self: end;
+    color: rgb(110, 110, 110);
+    border-top: 1px solid rgb(110, 110, 110);
+    padding-top: 5px;
+}
+
+@media(max-width:730px) {
+    #banner {
+        background-position: center;
+    }
+    header{
+        height: 130px;
+    }
+    .menu-mobile{
+        display: flex;
+        flex-direction: column;
+justify-content: space-around;
+    }
+    .logo{
+        padding-left: 20px;
+    }
+
+    nav ul{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #3d4040;
+        
+    }
+    nav ul li{
+        padding-top: 20px;
+    }
+    nav ul li a{
+        font-size: 40px;
+        text-shadow: 2px 2px 3px black;
+    }
+
+    .biography {
+        font-size: 20px;
+        line-height: 32px;
+        padding: 5px;
+    }
+    .photo figure img{
+        width: 310px;
+    }
+    .photo figure figcaption{
+        width: 305px;
+        font-size: 20px;
+    }
+    footer{
+        height: auto;
+    }
+    .fonts{
+        font-size: 30px;
+    }
+    .footer-copy{
+        font-size: 18px;
+    }
+}
+@media(max-width:600px) {
+    .widget-title{
+        width: auto;
+    }
+    
+    .widget-body{
+        width: auto;
+    }
+}
+@media(max-width:600px) {
+
+    .biography{
+        font-size: 17px;
+    }
+    .photo figure{
+        width: 210px;
+    }
+    .photo figure figcaption{
+        width: 200px;
+    }
+    .photo figure img{
+        width: 210px;
+    }
+    .widget-title{
+        width: 100%;
+    }
+}
