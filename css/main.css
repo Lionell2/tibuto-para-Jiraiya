@@ -1,301 +1,279 @@
+/* RESET */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  font-size: 1.6rem;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    background-color: #2f3030;
-    height: 130px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #2f3030;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    width: 750px;
-    overflow-x: hidden;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  width: 750px;
+  overflow-x: hidden;
+  justify-content: space-around;
 }
-.logo{
-    
+.logo {
 }
 .logo img {
-    width: 250px;
+  width: 250px;
 }
 
 .menu {
-    
 }
 
-nav {}
-.menu-mobile{
-display: none;
-
-width: 80px;
-height: 80px;
-margin-top: 25px;
-margin-bottom: 25px;
+nav {
 }
-.mm-line{
-    
-    height: 4px;
-    background: red;
+.menu-mobile {
+  display: none;
+
+  width: 80px;
+  height: 80px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.mm-line {
+  height: 4px;
+  background: red;
 }
 nav ul {
-    display: flex;
-
-
+  display: flex;
 }
 
 nav ul li {
-    list-style: none;
+  list-style: none;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    
-    margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: bold;
+
+  margin-left: 5px;
 }
 
 nav a:hover {
-    background-color: coral;
-    box-shadow: 0 0 15px coral;
-
+  background-color: coral;
+  box-shadow: 0 0 15px coral;
 }
-
+/* BANNER */
 #banner {
-    background-image: url(../img/jiraia.jpg);
-    height: 750px;
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
+  background-image: url(../img/jiraia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 10.4rem);
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
 }
 
-.Jiraiya_text {
-    font-size: 50px;
-    padding-left: 30px;
-    color: white;
-    text-shadow: 2px 2px 3px black;
+#banner em {
+  font-size: 4.8rem;
+  display: block;
+  padding-left: 3rem;
+  color: white;
+  text-shadow: 2px 2px 3px black;
 }
 
+@media (max-width: 900px) {
+  #banner em {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #banner em {
+    font-size: 2.4rem;
+  }
+}
+
+/* DETAILS */
 #geral {
-    background-image: url(../img/konoha.jpg);
-    height: auto;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
+  background-image: url(../img/konoha.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1.6rem;
 }
 
 .widget {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
+  background-color: burlywood;
+  max-width: 73rem;
+  margin: 0 auto;
+}
+
+.widget + .widget {
+  margin-top: 1.6rem;
 }
 
 .widget-title {
-    width: 730px;
-    background-color: #f56e5a;
-    ;
-    padding: 10px;
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    text-align: center;
+  background-color: #f56e5a;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
 }
 
 .widget-body {
-    width: 730px;
-    height: 450px;
-    background-color: burlywood;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  padding: 1rem;
 }
 
-.photo figure {
-    border: 3px solid #555;
-    background-color: #555;
+.widget-image {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.photo figure img {
-    width: 260px;
-    height: 195px;
-    object-fit: cover;
-
+.widget-image img {
+  width: 30rem;
+  height: 20rem;
 }
 
-.photo figure figcaption {
-    background-color: black;
-    color: white;
-    width: 250px;
-    height: 18px;
-    text-align: center;
-    padding: 5px;
-    font-weight: bold;
+.widget-image figure {
+  border: 3px solid #555;
+  background-color: #555;
+}
+
+.widget-image figcaption {
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  font-weight: bold;
 }
 
 .biography {
-    font-weight: bold;
-    line-height: 25px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.biography p + p {
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .biography {
+    font-size: 1.4rem;
+  }
 }
 
 .biography span {
-    text-decoration: underline;
-    color: greenyellow;
-    text-shadow: 2px 2px 2px black;
+  text-decoration: underline;
+  color: greenyellow;
+  text-shadow: 2px 2px 2px black;
 }
 
-.habilities {
-    height: auto;
-}
-
+/* FOOTER */
 footer {
-
-    overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    background-color: #2f3030;
-    height: 130px;
-    flex-direction: column;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #2f3030;
+  height: 130px;
+  flex-direction: column;
 }
 
 .container-footer {
-    display: flex;
-    justify-content: center;
-    width: 730px;
-    overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  width: 730px;
+  overflow-x: hidden;
 }
-
 
 .footer-area {
-    display: flex;
-
+  display: flex;
 }
 
-
-
 .fonts {
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 3px black;
-    text-align: center;
-
-
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 3px black;
+  text-align: center;
 }
 
 .fonts a {
-    text-decoration: underline;
-    color: white;
+  text-decoration: underline;
+  color: white;
 }
 
 .fonts a:hover {
-    text-shadow: 1px 1px 2px rgb(74, 172, 204);
+  text-shadow: 1px 1px 2px rgb(74, 172, 204);
 }
 
 .footer-copy {
+  width: 100%;
+  text-align: center;
+  align-self: end;
+  color: rgb(110, 110, 110);
+  border-top: 1px solid rgb(110, 110, 110);
+  padding: 5px;
+}
+
+@media (max-width: 730px) {
+  #banner {
+    background-position: center;
+  }
+  header {
+    height: 130px;
+  }
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .logo {
+    padding-left: 20px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 10px;
     width: 100%;
     text-align: center;
-    align-self: end;
-    color: rgb(110, 110, 110);
-    border-top: 1px solid rgb(110, 110, 110);
-    padding: 5px;
-}
-
-@media(max-width:730px) {
-    #banner {
-        background-position: center;
-    }
-    header{
-        height: 130px;
-    }
-    .menu-mobile{
-        display: flex;
-        flex-direction: column;
-justify-content: space-around;
-    }
-    .logo{
-        padding-left: 20px;
-    }
-
-    nav ul{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        margin: 0;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-        background-color: #3d4040;
-        
-    }
-    nav ul li{
-        padding-top: 20px;
-    }
-    nav ul li a{
-        font-size: 40px;
-        text-shadow: 2px 2px 3px black;
-    }
-
-    .biography {
-        font-size: 20px;
-        line-height: 32px;
-        padding: 5px;
-    }
-    .photo figure img{
-        width: 310px;
-    }
-    .photo figure figcaption{
-        width: 305px;
-        font-size: 20px;
-    }
-    footer{
-        height: auto;
-    }
-    .fonts{
-        font-size: 30px;
-    }
-    .footer-copy{
-        font-size: 18px;
-    }
-}
-@media(max-width:600px) {
-    .widget-title{
-        width: auto;
-    }
-    
-    .widget-body{
-        width: auto;
-    }
-}
-@media(max-width:600px) {
-
-    .biography{
-        font-size: 17px;
-    }
-    .photo figure{
-        width: 210px;
-    }
-    .photo figure figcaption{
-        width: 200px;
-    }
-    .photo figure img{
-        width: 210px;
-    }
-    .widget-title{
-        width: 100%;
-    }
+    background-color: #3d4040;
+  }
+  nav ul li {
+    padding-top: 20px;
+  }
+  nav ul li a {
+    font-size: 40px;
+    text-shadow: 2px 2px 3px black;
+  }
 }
