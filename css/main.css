@@ -190,10 +190,13 @@ nav a:hover {
   }
 }
 
-.biography span {
+.biography h3 {
   text-decoration: underline;
   color: greenyellow;
   text-shadow: 2px 2px 2px black;
+}
+.biography li{
+  padding-top: 1.5rem;
 }
 
 /* FOOTER */
