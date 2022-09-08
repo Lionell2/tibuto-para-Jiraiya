@@ -14,14 +14,15 @@ body {
   font-size: 1.6rem;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+
+#menu-mobile{
+  display: none;
+  padding: .8rem 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-ul {
-  list-style: none;
-}
+
 
 img {
   max-width: 100%;
@@ -33,6 +34,35 @@ header {
   display: flex;
   justify-content: center;
   background-color: #2f3030;
+  align-items: center;
+  gap: 2rem;
+  
+}
+#logo img{
+  width: 250px;
+}
+#menu{
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 22px;
+}
+#menu a{
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+ul a:hover{
+ background: rgba(255, 127, 80, .5);
+ text-shadow:2px 2px 3px rgba(255, 127, 80, .8) ;
+}
+#menu-mobile{
+  padding: .5rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  
 }
 
 .container {
@@ -42,51 +72,11 @@ header {
   overflow-x: hidden;
   justify-content: space-around;
 }
-.logo {
-}
-.logo img {
+
+#logo {
   width: 250px;
 }
 
-.menu {
-}
-
-nav {
-}
-.menu-mobile {
-  display: none;
-
-  width: 80px;
-  height: 80px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.mm-line {
-  height: 4px;
-  background: red;
-}
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  font-size: 28px;
-  font-weight: bold;
-
-  margin-left: 5px;
-}
-
-nav a:hover {
-  background-color: coral;
-  box-shadow: 0 0 15px coral;
-}
 /* BANNER */
 #banner {
   background-image: url(../img/jiraia.jpg);
@@ -252,31 +242,82 @@ footer {
   header {
     height: 130px;
   }
-  .menu-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  #menu{
+    display: block;
+    background-image: url(../img/background.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    position: absolute;
+    z-index: 1000;
+   
+   visibility: hidden;
+   overflow-y: hidden;
+   height: 0px;
+   top: 130px;
+   right: 0;
+   left: 0;
+   opacity: .0;
+   transition:.6s;
+  
   }
+  #menu-mobile{
+    display: flex;
+    align-items: center;
+  }
+  #nav.active #menu{
+    opacity: 1;
+    height: calc(100vh - 130px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+ #menu a{
+  display: block;
+  padding: 1rem 0;
+  margin: 0 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.85);
+  text-shadow: 4px 4px 3px black;
+ }
+ #menu a:hover{
+  background: rgba(0, 0, 0, 0.2);
+ }
   .logo {
     padding-left: 20px;
   }
+  #hamburguer{
+    width: 20px;
+   border-top: 2px solid;
+   display: block;
+   margin-left: 5px;
+  }
+  #hamburguer::after, #hamburguer::before{
+    content: '';
+    display: block;
+    width: 20px;
+    border-top: 2px solid;
+    background: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
+  #nav.active #hamburguer{
+    border-top: transparent;
+  }
+  #nav.active #hamburguer::after, #nav.active #hamburguer::before{
+    color: red;
+  }
+  #nav.active #hamburguer::after{
+    rotate: 45deg;
+    
+    top: -7px;
+  }
+  #nav.active #hamburguer::before{
+    rotate:-45deg;
+    
+  }
+  
+ 
+ 
+  
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    background-color: #3d4040;
-  }
-  nav ul li {
-    padding-top: 20px;
-  }
-  nav ul li a {
-    font-size: 40px;
-    text-shadow: 2px 2px 3px black;
-  }
 }
